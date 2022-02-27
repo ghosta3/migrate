@@ -14,7 +14,6 @@ import (
 
 import (
 	"github.com/golang-migrate/migrate/v4/source"
-	"github.com/xanzy/go-gitlab"
 )
 
 func init() {
@@ -68,7 +67,7 @@ func (g *Gitlab) Open(url string) (source.Driver, error) {
 
 	if u.Host != "" {
 		uri := nurl.URL{
-			Scheme: "https",
+			Scheme: "http",
 			Host:   u.Host,
 		}
 
