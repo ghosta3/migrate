@@ -68,7 +68,7 @@ func (g *Gitlab) Open(url string) (source.Driver, error) {
 
 	if u.Host != "" {
 		uri := nurl.URL{
-			Scheme: "https",
+			Scheme: "http",
 			Host:   u.Host,
 		}
 
